@@ -1,0 +1,29 @@
+# Day1
+
+## Reactのディレクトリ構成・動作について
+参考記事：https://zenn.dev/somahc/articles/c04c7a2c5e9f9b
+
+* トップページであるindex.htmlが真っ先に呼び出される。
+  ```
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  ```
+  `<div id="root"></div>`という要素を起点に、Reactアプリは動いている。
+
+* 次にindex.jsが呼び出される。これが、Reactアプリのスタート地点（エントリーポイント）である。
+  * まずReactに関するライブラリ・cssなどのファイルをインポートする。
+  * 次に、`id`が`root`の要素に関する埋め込み内容の指定を行っている。
+
+* 次にApp.jsが呼び出される。これはindex.js内に記述している`import App from './App';`によって呼び出されている。App.jsではコンポーネントが定義されている。

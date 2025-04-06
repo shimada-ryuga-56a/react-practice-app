@@ -1,19 +1,29 @@
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [newTodo, setNewTodo] = useState('');
+
+  const handleInputChange = (event) => {
+    setNewTodo(event.target.value);
+  };
+
   return (
-    <div class="todo_form">
+    <div className="todo_form">
       <h1>Todoリスト</h1>
       <div>
         <input
           type="text"
           placeholder="タスクを入力"
-          class="todo_input"
+          className="todo_input"
+          value={newTodo}
+          onChange={handleInputChange}
         />
-        <button class="info_button">
+        <button className="info_button">
           追加
         </button>
       </div>
+      <p>入力内容: {newTodo}</p>
     </div>
   );
 }

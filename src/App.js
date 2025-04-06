@@ -11,6 +11,7 @@ function App() {
 
   const handleAppTodos = () => {
     console.log("newTodo", newTodo);
+    console.log("todos", todos);
     if (newTodo.trim() !== '') {
       setTodos([...todos, newTodo]);
       setNewTodo('');
@@ -33,6 +34,14 @@ function App() {
         </button>
       </div>
       <p>入力内容: {newTodo}</p>
+      <div className="todo_list">
+        <h2>Todoリスト</h2>
+        <ul>
+          {todos.map((todo, index) => (
+            <li key={index}>{todo}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

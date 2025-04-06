@@ -10,12 +10,13 @@ function App() {
   };
 
   const handleAppTodos = () => {
-    console.log("newTodo", newTodo);
-    console.log("todos", todos);
+    console.log("handleAppTodosが呼ばれました");
     if (newTodo.trim() !== '') {
       setTodos([...todos, newTodo]);
       setNewTodo('');
     }
+    console.log("todos", todos);
+    console.log("handleAppTodos終了");
   }
 
   return (

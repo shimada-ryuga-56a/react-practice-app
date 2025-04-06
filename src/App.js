@@ -9,6 +9,14 @@ function App() {
     setNewTodo(event.target.value);
   };
 
+  const handleAppTodos = () => {
+    console.log("newTodo", newTodo);
+    if (newTodo.trim() !== '') {
+      setTodos([...todos, newTodo]);
+      setNewTodo('');
+    }
+  }
+
   return (
     <div className="todo_form">
       <h1>Todoリスト</h1>
@@ -20,7 +28,7 @@ function App() {
           value={newTodo}
           onChange={handleInputChange}
         />
-        <button className="info_button">
+        <button className="info_button" onClick={handleAppTodos}>
           追加
         </button>
       </div>

@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.info_button {
+  background-color: #8561fb;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.info_button:hover {
+  background-color: #5e35b1;
+}
+
+.todo_form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
+.todo_input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

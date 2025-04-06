@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -15,9 +15,12 @@ function App() {
       setTodos([...todos, newTodo]);
       setNewTodo('');
     }
-    console.log("todos", todos);
     console.log("handleAppTodos終了");
   }
+
+  useEffect(() => {
+    console.log("updated todos:", todos);
+  }, [todos]);
 
   return (
     <div className="todo_div">

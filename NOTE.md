@@ -1,6 +1,6 @@
 # Day1
 
-## Reactのディレクトリ構成・動作について
+## 【Reactのディレクトリ構成・動作について】
 参考記事：https://zenn.dev/somahc/articles/c04c7a2c5e9f9b
 
 * トップページであるindex.htmlが真っ先に呼び出される。
@@ -28,8 +28,8 @@
 
 * 次にApp.jsが呼び出される。これはindex.js内に記述している`import App from './App';`によって呼び出されている。App.jsではコンポーネントが定義されている。
 
-## Reactの基本概念
-### PropsとStateについて
+## 【Reactの基本概念】
+### 🍠PropsとStateについて
 * Propsとは、**親コンポーネントから子コンポーネントへ渡される読み取り専用のデータ**である。
   ```
   function Greeting(props) {

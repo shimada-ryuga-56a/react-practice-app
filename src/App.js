@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="todo_form">
+    <div className="todo_div">
       <h1>Todoリスト</h1>
       <div>
         <input

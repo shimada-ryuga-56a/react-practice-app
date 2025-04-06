@@ -54,6 +54,13 @@
   background-color: #5e35b1;
 }
 
+.todo_div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
 .todo_form {
   display: flex;
   flex-direction: column;

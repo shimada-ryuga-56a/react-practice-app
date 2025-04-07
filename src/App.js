@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import ShowText from './ShowText.js';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -38,6 +39,7 @@ function App() {
         </button>
       </div>
       <p>入力内容: {newTodo}</p>
+      <ShowText text="テスト！"/>
       <div className="todo_list">
         <h2>Todoリスト</h2>
         <ul>

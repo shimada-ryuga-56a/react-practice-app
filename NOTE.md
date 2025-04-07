@@ -57,3 +57,34 @@
     }, [todos]);
     ```
     `{}`内の引数1が、実行したい関数（副作用関数）である。引数2は依存配列と呼ばれ、ここに指定した値が変わると、第1引数の関数が再実行される。
+
+## 【`Props`とは】
+コンポーネント間のデータを受け渡す際のまとまり。
+基本的な構文は下記のとおり。
+```
+# 親コンポーネント
+
+const hogeText = "word";
+
+return (
+  <div>
+    <ShowText name={hogeText} />
+  </div>
+)
+```
+
+```
+# 子コンポーネント
+function ShowText (props) {
+  return <h1>Hello, {props.name}</h1>
+}
+```
+
+関数ShowTextは、引数としてpropsを受け取っている。しかし、これだと書き方が煩わしいため、下記のようにすることもできる。
+
+```
+# 子コンポーネント
+function ShowText (name) {
+  return <h1>Hello, {name}</h1>
+}
+```

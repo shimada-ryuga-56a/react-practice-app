@@ -84,7 +84,7 @@ function ShowText (props) {
 
 ```
 # 子コンポーネント
-function ShowText (name) {
+function ShowText ({name}) {
   return <h1>Hello, {name}</h1>
 }
 ```

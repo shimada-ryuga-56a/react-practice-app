@@ -22,7 +22,8 @@ function App() {
   }
 
   const handleDeleteTodos = (indexToDelete) => {
-    const updatedTodos = todos.filter((_, index) => index != indexToDelete)
+    const updatedTodos = todos.filter((_, index) => index != indexToDelete);
+    setTodos(updatedTodos);
   }
 
   useEffect(() => {
@@ -39,7 +40,7 @@ function App() {
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onDelete={handleDeleteTodos} />
     </div>
   );
 }

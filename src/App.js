@@ -7,6 +7,8 @@ import TodoList from './todos/TodoList.js';
 function App() {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
+  const [editingIndex, setEditingIndex] = useState(null);
+  const [editingText, setEditingText] = useState('');
 
   const handleInputChange = (event) => {
     setNewTodo(event.target.value);

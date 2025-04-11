@@ -28,6 +28,11 @@ function App() {
     setTodos(updatedTodos);
   }
 
+  const handleStartEdit = (index) => {
+    setEditingIndex(index);
+    setEditingText(todos[index]);
+  }
+
   useEffect(() => {
     console.log("updated todos:", todos);
   }, [todos]);

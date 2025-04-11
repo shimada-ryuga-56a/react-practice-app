@@ -12,7 +12,7 @@ function App() {
     setNewTodo(event.target.value);
   };
 
-  const handleAppTodos = () => {
+  const handleAddTodos = () => {
     console.log("handleAppTodosが呼ばれました");
     if (newTodo.trim() !== '') {
       setTodos([...todos, newTodo]);
@@ -31,7 +31,7 @@ function App() {
       <TodoInput
         newTodo={newTodo}
         onInputChange={handleInputChange}
-        onAddTodo={handleAppTodos}
+        onAddTodo={handleAddTodos}
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>

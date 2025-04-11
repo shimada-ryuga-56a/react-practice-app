@@ -88,3 +88,14 @@ function ShowText ({name}) {
   return <h1>Hello, {name}</h1>
 }
 ```
+
+# Day3
+
+## `Array.prototype.filter()`の使い方
+`filter`は、配列の各要素に対して、指定した条件の結果が`true`になるものだけを抽出して、新しい配列を作る。
+
+```
+array.filter((element, index, array) => { /* 条件 */ });
+```
+
+条件の箇所が`true`であればその要素は除外されない。

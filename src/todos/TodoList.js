@@ -6,7 +6,7 @@ function TodoList ({ todos, onDelete }) {
       <h2>Todoリスト</h2>
       <ul>
         {todos.map((todo, index) => (
-          <TodoItem index={index} todo={todo} onDelete={onDelete}/>
+          <TodoItem key={index} todo={todo} onDelete={onDelete}/>
         ))}
       </ul>
     </div>

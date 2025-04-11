@@ -99,3 +99,10 @@ array.filter((element, index, array) => { /* 条件 */ });
 ```
 
 条件の箇所が`true`であればその要素は除外されない。
+
+## `useState`についての補足
+```
+const [editingIndex, setEditingIndex] = useState(null);
+```
+
+上記のコードのように、`useState`の引数に設定されている値は、`editingIndex`の初期値になる。

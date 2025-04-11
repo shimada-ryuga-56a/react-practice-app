@@ -1,10 +1,12 @@
+import TodoItem from './TodoItem.js';
+
 function TodoList ({ todos }) {
   return (
     <div className="todo_list">
       <h2>Todoリスト</h2>
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+          <TodoItem index={index} todo={todo}/>
         ))}
       </ul>
     </div>

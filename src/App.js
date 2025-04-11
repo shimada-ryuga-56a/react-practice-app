@@ -21,6 +21,10 @@ function App() {
     console.log("handleAppTodos終了");
   }
 
+  const handleDeleteTodos = (indexToDelete) => {
+    const updatedTodos = todos.filter((_, index) => index != indexToDelete)
+  }
+
   useEffect(() => {
     console.log("updated todos:", todos);
   }, [todos]);

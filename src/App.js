@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import ShowText from './ShowText.js';
 import TodoInput from './todos/TodoInput.js';
+import TodoList from './todos/TodoList.js';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -34,14 +35,7 @@ function App() {
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
-      <div className="todo_list">
-        <h2>Todoリスト</h2>
-        <ul>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
-          ))}
-        </ul>
-      </div>
+      <TodoList todos={todos} />
     </div>
   );
 }

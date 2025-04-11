@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import ShowText from './ShowText.js';
+import TodoInput from './todos/TodoInput.js';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -26,18 +27,11 @@ function App() {
   return (
     <div className="todo_div">
       <h1>Todoリスト</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="タスクを入力"
-          className="todo_input"
-          value={newTodo}
-          onChange={handleInputChange}
-        />
-        <button className="info_button" onClick={handleAppTodos}>
-          追加
-        </button>
-      </div>
+      <TodoInput
+        newTodo={newTodo}
+        onInputChange={handleInputChange}
+        onAddTodo={handleAppTodos}
+      />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
       <div className="todo_list">

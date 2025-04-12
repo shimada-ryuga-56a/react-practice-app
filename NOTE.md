@@ -106,3 +106,7 @@ const [editingIndex, setEditingIndex] = useState(null);
 ```
 
 上記のコードのように、`useState`の引数に設定されている値は、`editingIndex`の初期値になる。
+
+## コードに関する理解
+* `editingIndex`は、編集中のtodoの`index`を保存するための状態変数。`setEditingIndex`でこの値を更新できる。
+* 今回はもっと言うと、子コンポーネントから`onStartEdit`関数を通して、`setEditingIndex`を動作させる。

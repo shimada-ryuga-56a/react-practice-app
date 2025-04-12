@@ -29,6 +29,7 @@ function App() {
   }
 
   const handleStartEdit = (index) => {
+    console.log("編集ボタンが押されました");
     setEditingIndex(index);
     setEditingText(todos[index]);
   }
@@ -47,7 +48,7 @@ function App() {
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
-      <TodoList todos={todos} onDelete={handleDeleteTodos} />
+      <TodoList todos={todos} onDelete={handleDeleteTodos} onStartEdit={handleStartEdit} />
     </div>
   );
 }

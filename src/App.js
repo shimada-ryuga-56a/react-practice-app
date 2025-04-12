@@ -29,7 +29,7 @@ function App() {
   }
 
   const handleStartEdit = (index) => {
-    console.log("編集ボタンが押されました");
+    console.log("handleStartEditが呼ばれました");
     setEditingIndex(index);
     setEditingText(todos[index]);
   }

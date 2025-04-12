@@ -34,6 +34,10 @@ function App() {
     setEditingText(todos[index]);
   }
 
+  const handleEditingChange = (event) => {
+    setEditingText(event.target.value);
+  }
+
   useEffect(() => {
     console.log("updated todos:", todos);
   }, [todos]);

@@ -105,8 +105,9 @@ array.filter((element, index, array) => { /* 条件 */ });
 const [editingIndex, setEditingIndex] = useState(null);
 ```
 
-上記のコードのように、`useState`の引数に設定されている値は、`editingIndex`の初期値になる。
+上記のコードのように、`useState`の引数に設定されている値は、`editingIndex`の初期値になる。なお、`editingIndex`は、`setEditingIndex`関数が呼び出されたら、その引数に更新される。
 
 ## コードに関する理解
 * `editingIndex`は、編集中のtodoの`index`を保存するための状態変数。`setEditingIndex`でこの値を更新できる。
 * 今回はもっと言うと、子コンポーネントから`onStartEdit`関数を通して、`setEditingIndex`を動作させる。
+* Reactは、「編集中の値はこれ！」「編集後の値はこれ！」といった形で、様々な値を`useState`で状態管理している印象！

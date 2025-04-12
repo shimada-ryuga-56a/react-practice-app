@@ -38,6 +38,17 @@ function App() {
     setEditingText(event.target.value);
   }
 
+  const handleUpdate = () => {
+    if (editingIndex.trim() !== '' && editingIndex !== null) {
+      const updateTodos = todos.map((todo, i) =>
+        i === editingIndex ? editingText : todo
+      );
+      setTodos(updateTodos);
+      setEditingIndex(null);
+      setEditingText("");
+    }
+  }
+
   useEffect(() => {
     console.log("updated todos:", todos);
   }, [todos]);

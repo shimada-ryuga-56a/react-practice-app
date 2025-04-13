@@ -111,3 +111,4 @@ const [editingIndex, setEditingIndex] = useState(null);
 * `editingIndex`は、編集中のtodoの`index`を保存するための状態変数。`setEditingIndex`でこの値を更新できる。
 * 今回はもっと言うと、子コンポーネントから`onStartEdit`関数を通して、`setEditingIndex`を動作させる。
 * Reactは、「編集中の値はこれ！」「編集後の値はこれ！」といった形で、様々な値を`useState`で状態管理している印象！
+* `editingText`は、編集入力フォームに入力された値を保持する。`handleEditingChange`関数によって値の更新が行われる。

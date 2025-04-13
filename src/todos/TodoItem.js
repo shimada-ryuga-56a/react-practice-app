@@ -1,4 +1,4 @@
-function TodoItem({ todo, index, onDelete, onStartEdit }) {
+function TodoItem({ todo, index, onDelete, onStartEdit, editingIndex, editingText, handleEditingChange, handleUpdate }) {
   return (
     <li key={index}>
       {todo}

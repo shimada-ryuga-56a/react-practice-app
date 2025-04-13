@@ -63,7 +63,14 @@ function App() {
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
-      <TodoList todos={todos} onDelete={handleDeleteTodos} onStartEdit={handleStartEdit} />
+      <TodoList
+        todos={todos}
+        onDelete={handleDeleteTodos}
+        onStartEdit={handleStartEdit}
+        editingIndex={editingIndex}
+        editingText={editingText}
+        onEditingChange={handleEditingChange}
+        onUpdate={handleUpdate} />
     </div>
   );
 }

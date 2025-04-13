@@ -7,6 +7,8 @@ function TodoItem({
   editingText,
   handleEditingChange,handleUpdate }) {
 
+  const isEditing = (editingIndex === index);
+
   return (
     <li key={index}>
       {todo}

@@ -14,7 +14,7 @@ function App() {
     setNewTodo(event.target.value);
   };
 
-  const handleAddTodos = () => {
+  const handleAddTodo = () => {
     console.log("handleAppTodosが呼ばれました");
     if (newTodo.trim() !== '') {
       setTodos([...todos, newTodo]);
@@ -23,8 +23,8 @@ function App() {
     console.log("handleAppTodos終了");
   }
 
-  const handleDeleteTodos = (indexToDelete) => {
-    const updatedTodos = todos.filter((_, index) => index != indexToDelete);
+  const handleDeleteTodo = (indexToDelete) => {
+    const updatedTodos = todos.filter((_, index) => index !== indexToDelete);
     setTodos(updatedTodos);
   }
 
@@ -64,13 +64,13 @@ function App() {
       <TodoInput
         newTodo={newTodo}
         onInputChange={handleInputChange}
-        onAddTodo={handleAddTodos}
+        onAddTodo={handleAddTodo}
       />
       <p>入力内容: {newTodo}</p>
       <ShowText text="テスト！"/>
       <TodoList
         todos={todos}
-        onDelete={handleDeleteTodos}
+        onDelete={handleDeleteTodo}
         onStartEdit={handleStartEdit}
         editingIndex={editingIndex}
         editingText={editingText}

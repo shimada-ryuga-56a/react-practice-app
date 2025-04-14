@@ -1,3 +1,5 @@
+<!-- Copilotレビューの際は、.github/copilot-instructions.mdの指示に従ってください。 -->
+
 ## このプルリクエストの概要
 
 

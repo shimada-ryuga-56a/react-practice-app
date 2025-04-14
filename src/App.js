@@ -53,6 +53,10 @@ function App() {
     console.log("updated todos:", todos);
   }, [todos]);
 
+  useEffect(() => {
+    console.log("updated editingText:", editingText);
+  }, [editingText]);
+
   return (
     <div className="todo_div">
       <h1>Todoリスト</h1>

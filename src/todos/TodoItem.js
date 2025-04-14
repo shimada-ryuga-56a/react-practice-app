@@ -20,6 +20,11 @@ function TodoItem({
             value={editingText}
             onChange={onEditingChange}>
           </input>
+          <button
+            className="info_button"
+            onClick={() => onUpdate()}>
+            更新
+          </button>
         </>
       ) : (
         <>

@@ -15,12 +15,10 @@ function App() {
   };
 
   const handleAddTodo = () => {
-    console.log("handleAppTodosが呼ばれました");
     if (newTodo.trim() !== '') {
       setTodos([...todos, newTodo]);
       setNewTodo('');
     }
-    console.log("handleAppTodos終了");
   }
 
   const handleDeleteTodo = (indexToDelete) => {
@@ -29,7 +27,6 @@ function App() {
   }
 
   const handleStartEdit = (index) => {
-    console.log("handleStartEditが呼ばれました");
     setEditingIndex(index);
     setEditingText(todos[index]);
   }
@@ -39,7 +36,6 @@ function App() {
   }
 
   const handleUpdate = () => {
-    console.log("更新ボタンが押されました");
     if (editingText.trim() !== '' && editingIndex !== null) {
       const updateTodos = todos.map((todo, i) =>
         i === editingIndex ? editingText : todo

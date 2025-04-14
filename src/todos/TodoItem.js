@@ -5,23 +5,37 @@ function TodoItem({
   onStartEdit,
   editingIndex,
   editingText,
-  handleEditingChange,handleUpdate }) {
+  onEditingChange,
+  onUpdate }) {
 
   const isEditing = (editingIndex === index);
 
   return (
     <li key={index}>
-      {todo}
-      <button
-        className="info_button"
-        onClick={() => onStartEdit(index)}>
-        編集
-      </button>
-      <button
-        className="delete_button"
-        onClick={() => onDelete(index)}>
-        削除
-      </button>
+      {isEditing? (
+        <>
+          <input
+            className="todo_input"
+            type="text"
+            value={editingText}
+            onChange={onEditingChange}>
+          </input>
+        </>
+      ) : (
+        <>
+          {todo}
+          <button
+            className="info_button"
+            onClick={() => onStartEdit(index)}>
+            編集
+          </button>
+          <button
+            className="delete_button"
+            onClick={() => onDelete(index)}>
+            削除
+          </button>
+        </>)
+      }
     </li>
   )
 }

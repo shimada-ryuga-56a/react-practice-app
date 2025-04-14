@@ -39,7 +39,8 @@ function App() {
   }
 
   const handleUpdate = () => {
-    if (editingIndex.trim() !== '' && editingIndex !== null) {
+    console.log("更新ボタンが押されました");
+    if (editingText.trim() !== '' && editingIndex !== null) {
       const updateTodos = todos.map((todo, i) =>
         i === editingIndex ? editingText : todo
       );

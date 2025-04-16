@@ -29,7 +29,7 @@ function TodoItem({
   const isEditing = (editingIndex === index);
 
   return (
-    <li key={index}>
+    <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
       {isEditing? (
         <>
           <input

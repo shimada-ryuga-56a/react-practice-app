@@ -46,6 +46,21 @@ function App() {
     }
   }
 
+  const handleDragEnd = (event) => {
+    const { active, over } = event;
+
+    if (over && active.id !== over.id) {
+      const oldIndex = parseInt(active.id, 10);
+      const newIndex = parseInt(over.id, 10);
+
+      const newTodos = Array.from(todos);
+      const [movedItem] = newTodos.splice(oldIndex, 1);
+      newTodos.splice(newIndex, 0, movedItem);
+
+      setTodos(newTodos);
+    }
+  };
+
   useEffect(() => {
     console.log("updated todos:", todos);
   }, [todos]);
@@ -71,7 +86,8 @@ function App() {
         editingIndex={editingIndex}
         editingText={editingText}
         onEditingChange={handleEditingChange}
-        onUpdate={handleUpdate} />
+        onUpdate={handleUpdate}
+        onDragEnd={handleDragEnd} />
     </div>
   );
 }

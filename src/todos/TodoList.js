@@ -1,4 +1,6 @@
 import TodoItem from './TodoItem.js';
+import { DndContext } from '@dnd-kit/core';
+import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 function TodoList ({ todos, onDelete, onStartEdit, editingIndex, editingText, onEditingChange, onUpdate }) {
   return (

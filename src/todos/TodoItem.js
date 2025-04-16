@@ -13,6 +13,19 @@ function TodoItem({
   onEditingChange,
   onUpdate }) {
 
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+  } = useSortable({ id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
   const isEditing = (editingIndex === index);
 
   return (

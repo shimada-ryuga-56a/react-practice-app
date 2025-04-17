@@ -1,4 +1,9 @@
+import React from 'react';
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+
 function TodoItem({
+  id,
   todo,
   index,
   onDelete,
@@ -8,10 +13,26 @@ function TodoItem({
   onEditingChange,
   onUpdate }) {
 
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+  } = useSortable({ id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
   const isEditing = (editingIndex === index);
 
   return (
-    <li key={index}>
+    <li ref={setNodeRef} style={style} {...attributes}>
+      <span {...listeners} style={{ cursor: 'grab', paddingRight: '8px' }}>
+        ::
+      </span>
       {isEditing? (
         <>
           <input

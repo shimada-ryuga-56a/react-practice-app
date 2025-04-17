@@ -130,3 +130,4 @@ const [editingIndex, setEditingIndex] = useState(null);
 * `DndContext`について
   * ドラッグ＆ドロップを行うための要素は、`DndContext`コンポーネントの中に含まれている必要があ  る。
   * `<DndContext>`の中に`<DndContext>`をネストさせて、親要素＞子要素＞孫要素のようにし、子要素内で孫要素の並び替えを行うことも可能。
+  * `ref={setNodeRef}`を設けている要素が、DnD可能な要素である。その中で、`{...listeners}`を持っている要素が、DnDのときに掴むことができる範囲となる。
